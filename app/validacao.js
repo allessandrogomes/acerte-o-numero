@@ -1,5 +1,5 @@
 function verificaValor(chute) {
-    const numero = +chute
+    const numero =+ chute
 
     if (chuteForInvalido(numero)) {
         elementoChute.innerHTML += '<div>Valor inválido</div>'
@@ -10,7 +10,6 @@ function verificaValor(chute) {
         elementoChute.innerHTML += `
             <div>Valor inválido: o número precisa estar entre ${menorValor} e ${maiorValor}</div>
         `
-
         return
     }
 
@@ -32,12 +31,12 @@ function verificaValor(chute) {
     }
 }
 
-function newFunction(numero) {
-    return Number.isNaN(numero);
+function chuteForInvalido(numero) {
+    return Number.isNaN(numero)
 }
 
 function numeroMaiorMenor(numero) {
-    return numero > maiorValor || numero <menorValor
+    return numero > maiorValor || numero < menorValor
 }
 
 document.body.addEventListener('click', e => {

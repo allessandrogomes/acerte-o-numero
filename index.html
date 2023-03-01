@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        neon: {
+                            primary: '#000000',
+                            secondary: '#150050',
+                            tertiary: '#3F0071',
+                            quarter: '#FB2576'
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Acerte o número</title>
+</head>
+
+<body class="font-poppins bg-neon-primary text-neon-quarter min-h-screen flex flex-col items-center justify-center text-center m-0">
+    <h1 class="text-5xl">Acerte o número secreto</h1>
+
+    <h3 class="text-2xl mt-5">O número secreto está entre <span id="menor-valor"></span> e <span id="maior-valor"></span></h3>
+
+    <div id="chute" class="text-1xl mt-10"></div>
+    <script src="./app/sortearNumero.js"></script>
+    <script src="./app/reconhecimentoDeVoz.js"></script>
+    <script src="./app/validacao.js"></script>
+</body>
+
+</html>
